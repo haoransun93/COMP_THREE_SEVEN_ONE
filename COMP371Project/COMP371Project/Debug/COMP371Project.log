@@ -1,80 +1,29 @@
-﻿Build started 2016-05-02 12:03:06 AM.
-     1>Project "C:\Users\H\Desktop\COMP371PRO\COMP371Project\COMP371Project\COMP371Project.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 2016-05-05 11:30:07 AM.
+     1>Project "C:\Users\H\Desktop\PROJECT\COMP371Project\COMP371Project\COMP371Project.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\H\Desktop\COMP371PRO\COMP371Project\COMP371Project\\..\..\Externals\glm /IC:\Users\H\Desktop\COMP371PRO\COMP371Project\COMP371Project\\..\..\Externals\GL /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D STATIC_GLEW /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp CameraRenderer.cpp GameEngine.cpp Map.cpp MapEngine.cpp Model.cpp ModelLoader.cpp ModelRoot.cpp Player.cpp RenderEngine.cpp Source.cpp Texture.cpp World.cpp WorldEngine.cpp WorldRenderer.cpp
-         WorldRenderer.cpp
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(6): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(7): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-         Note: including lib: glut32.lib
-         
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\worldrenderer.cpp(104): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\worldrenderer.cpp(106): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\worldrenderer.cpp(154): warning C4018: '<' : signed/unsigned mismatch
-         WorldEngine.cpp
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(6): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(7): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\worldengine.cpp(24): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\worldengine.cpp(25): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-         World.cpp
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(6): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(7): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-         Texture.cpp
-         Note: including lib: glut32.lib
-         
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\H\Desktop\PROJECT\COMP371Project\COMP371Project\\..\..\Externals\glm /IC:\Users\H\Desktop\PROJECT\COMP371Project\COMP371Project\\..\..\Externals\GL /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D STATIC_GLEW /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt RenderModel.cpp Source.cpp
          Source.cpp
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(6): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(7): warning C4305: 'initializing' : truncation from 'double' to 'const float'
          Note: including lib: glut32.lib
          
-         RenderEngine.cpp
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(6): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(7): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+     1>c:\users\h\desktop\project\comp371project\comp371project\source.cpp(161): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\h\desktop\project\comp371project\comp371project\source.cpp(174): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\h\desktop\project\comp371project\comp371project\source.cpp(335): warning C4018: '<' : signed/unsigned mismatch
+         RenderModel.cpp
          Note: including lib: glut32.lib
          
-         Player.cpp
-         ModelRoot.cpp
-         ModelLoader.cpp
-         Note: including lib: glut32.lib
-         
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\modelloader.cpp(8): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\modelloader.cpp(10): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\modelloader.cpp(99): warning C4101: 'title' : unreferenced local variable
-         Model.cpp
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\model.cpp(25): warning C4101: 'two' : unreferenced local variable
-         MapEngine.cpp
-         Map.cpp
-         GameEngine.cpp
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(6): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>c:\users\h\desktop\comp371pro\comp371project\comp371project\constants.h(7): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-         Note: including lib: glut32.lib
-         
-         CameraRenderer.cpp
-         Note: including lib: glut32.lib
-         
-         Camera.cpp
          Generating Code...
        ResourceCompile:
          C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /l"0x0409" /nologo /fo"Debug\COMP371Project.res" COMP371Project.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\H\Desktop\COMP371PRO\COMP371Project\Debug\COMP371Project.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\H\Desktop\COMP371PRO\COMP371Project\COMP371Project\\..\..\Externals\GL glew32.lib glut32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\H\Desktop\COMP371PRO\COMP371Project\Debug\COMP371Project.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\H\Desktop\COMP371PRO\COMP371Project\Debug\COMP371Project.lib" /MACHINE:X86 Debug\COMP371Project.res
-         Debug\Camera.obj
-         Debug\CameraRenderer.obj
-         Debug\GameEngine.obj
-         Debug\Map.obj
-         Debug\MapEngine.obj
-         Debug\Model.obj
-         Debug\ModelLoader.obj
-         Debug\ModelRoot.obj
-         Debug\Player.obj
-         Debug\RenderEngine.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\H\Desktop\PROJECT\COMP371Project\Debug\COMP371Project.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\H\Desktop\PROJECT\COMP371Project\COMP371Project\\..\..\Externals\GL glut32.lib glfw3.lib glew32s.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\H\Desktop\PROJECT\COMP371Project\Debug\COMP371Project.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\H\Desktop\PROJECT\COMP371Project\Debug\COMP371Project.lib" /MACHINE:X86 Debug\COMP371Project.res
+         Debug\RenderModel.obj
          Debug\Source.obj
-         Debug\Texture.obj
-         Debug\World.obj
-         Debug\WorldEngine.obj
-         Debug\WorldRenderer.obj
-         COMP371Project.vcxproj -> C:\Users\H\Desktop\COMP371PRO\COMP371Project\Debug\COMP371Project.exe
-     1>Done Building Project "C:\Users\H\Desktop\COMP371PRO\COMP371Project\COMP371Project\COMP371Project.vcxproj" (Rebuild target(s)).
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\H\Desktop\PROJECT\COMP371Project\Debug\vc120.pdb'; linking object as if no debug info
+         COMP371Project.vcxproj -> C:\Users\H\Desktop\PROJECT\COMP371Project\Debug\COMP371Project.exe
+     1>Done Building Project "C:\Users\H\Desktop\PROJECT\COMP371Project\COMP371Project\COMP371Project.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.46
+Time Elapsed 00:00:00.98

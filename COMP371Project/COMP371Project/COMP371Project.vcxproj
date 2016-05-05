@@ -50,7 +50,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)\..\..\Externals\GL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glew32.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glut32.lib;glfw3.lib;glew32s.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -68,42 +68,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="CameraRenderer.h" />
     <ClInclude Include="Constants.h" />
-    <ClInclude Include="GameEngine.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="MapEngine.h" />
-    <ClInclude Include="Model.h" />
-    <ClInclude Include="ModelLoader.h" />
-    <ClInclude Include="ModelRoot.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="RenderEngine.h" />
+    <ClInclude Include="RenderModel.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="World.h" />
-    <ClInclude Include="WorldEngine.h" />
-    <ClInclude Include="WorldRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="COMP371Project.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="CameraRenderer.cpp" />
-    <ClCompile Include="GameEngine.cpp" />
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="MapEngine.cpp" />
-    <ClCompile Include="Model.cpp" />
-    <ClCompile Include="ModelLoader.cpp" />
-    <ClCompile Include="ModelRoot.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="RenderEngine.cpp" />
+    <ClCompile Include="RenderModel.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="World.cpp" />
-    <ClCompile Include="WorldEngine.cpp" />
-    <ClCompile Include="WorldRenderer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
