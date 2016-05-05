@@ -38,7 +38,7 @@ glm::mat4 View;
 
 float rotate_amount = 0.0f;
 float rotate_speed = 0.003f;
-float SPEED_UP = 1.0f;
+float SPEED_UP = 10.0f;
 
 std::vector<RenderModel> models;
 std::map<std::string, GLuint> buffers;
@@ -264,6 +264,7 @@ int main(void)
 		return -1;
 	}
 
+	Model * dresser = new Model("Models\\interior.obj");
 
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
@@ -274,10 +275,11 @@ int main(void)
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
 
-	programID = LoadShaders("TransformVertexShader.vertexshader", "ColorFragmentShader.fragmentshader");
+	//programID = LoadShaders("Shaders\\TransformVertexShader.vertexshader", "Shaders\\ColorFragmentShader.fragmentshader");
+	programID = LoadShaders("Shaders\\shader.vs", "Shaders\\shader.frag");
 	MatrixID = glGetUniformLocation(programID, "MVP");
 
-	Projection = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f);
+	Projection = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 1000.0f);
 	cam = glm::vec3(0.0f, 0, -4.0f);
 	look = glm::vec3(0, 0, 0);
 	up = glm::vec3(0, 1, 0);
@@ -311,6 +313,7 @@ int main(void)
 	temp.rotate_axis = ROTATE_AXIS_Z;
 	temp.pos_from_origin = glm::vec3(-0.5f);
 	temp.pos_to_translate = glm::vec3(0.0f);
+	temp.model = dresser;
 	models.push_back(temp);
 
 	RenderModel temp2;
@@ -321,6 +324,7 @@ int main(void)
 	temp2.rotate_axis = ROTATE_AXIS_Z;
 	temp2.pos_from_origin = glm::vec3(-0.5f);
 	temp2.pos_to_translate = glm::vec3(5.0f, 0.0f, 0.0f);
+	temp2.model = dresser;
 	models.push_back(temp2);
 
 	// Use our shader
@@ -345,13 +349,20 @@ int main(void)
 			models[i].rotate_amount = rotate_amount;
 			glm::mat4 Model = models[i].return_model_matrix();
 			glm::mat4 MVP = Projection * View * Model;
+
+			// Send our transformation to the currently bound shader, 
+			// in the "MVP" uniform
+			glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
+
+			models[i].model->Draw(MatrixID);
+			/*
 			if (models[i].selected)
 			{
 				DrawObject(models[i].vertex, buffers["SELECTED"], MatrixID, MVP);
 			}
 			else {
 				DrawObject(models[i].vertex, models[i].color, MatrixID, MVP);
-			}
+			}*/
 		}
 
 		// Swap buffers

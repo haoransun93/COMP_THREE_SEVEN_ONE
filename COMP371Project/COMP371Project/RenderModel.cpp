@@ -28,9 +28,9 @@ glm::mat4 RenderModel::return_model_matrix()
 	}
 	if (can_scale)
 	{
-	
-	}
 
+	}
+	Model = glm::scale(Model, glm::vec3(0.10f));
 	return Model;
 }
 

@@ -21,7 +21,7 @@ public:
 	GLuint color;
 	GLuint texture;
 
-	//Model model = NULL;
+	Model * model;
  
 	glm::mat4 return_model_matrix();
 	glm::vec3 return_model_location();

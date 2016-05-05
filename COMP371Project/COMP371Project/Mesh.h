@@ -54,7 +54,7 @@ public:
 	}
 	
 	// Render the mesh
-	void Draw(Shader shader)
+	void Draw(GLuint program)
 	{
 		// Bind appropriate textures
 		GLuint diffuseNr = 1;
@@ -78,7 +78,7 @@ public:
 				ss << heightNr++; // Transfer GLuint to stream
 			number = ss.str();
 			// Now set the sampler to the correct texture unit
-			glUniform1i(glGetUniformLocation(shader.Program, (name + number).c_str()), i);
+			glUniform1i(glGetUniformLocation(program, (name + number).c_str()), i);
 			// And finally bind the texture
 			glBindTexture(GL_TEXTURE_2D, this->textures[i].id);
 		}

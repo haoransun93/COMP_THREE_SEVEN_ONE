@@ -16,7 +16,6 @@ using namespace std;
 #include <assimp\scene.h>
 #include <assimp\postprocess.h>
 
-#include "Shader.h"
 #include "Mesh.h"
 
 
@@ -37,10 +36,10 @@ public:
 	}
 
 	// Draws the model, and thus all its meshes
-	void Draw(Shader shader)
+	void Draw(GLuint program)
 	{
 		for (GLuint i = 0; i < this->meshes.size(); i++)
-			this->meshes[i].Draw(shader);
+			this->meshes[i].Draw(program);
 	}
 
 private:
@@ -64,14 +63,11 @@ private:
 		this->processNode(scene->mRootNode, scene);
 	}
 
-	// Processes a node in a recursive fashion. Processes each individual mesh located at the node and repeats this process on its children nodes (if any).
 	void processNode(aiNode* node, const aiScene* scene)
 	{
 		// Process each mesh located at the current node
 		for (GLuint i = 0; i < node->mNumMeshes; i++)
 		{
-			// The node object only contains indices to index the actual objects in the scene. 
-			// The scene contains all the data, node is just to keep stuff organized (like relations between nodes).
 			aiMesh* mesh = scene->mMeshes[node->mMeshes[i]];
 			this->meshes.push_back(this->processMesh(mesh, scene));
 		}
@@ -118,14 +114,14 @@ private:
 			else
 				vertex.TexCoords = glm::vec2(0.0f, 0.0f);
 			// Tangent
-			vector.x = mesh->mTangents[i].x;
-			vector.y = mesh->mTangents[i].y;
-			vector.z = mesh->mTangents[i].z;
+			//vector.x = mesh->mTangents[i].x;
+			//vector.y = mesh->mTangents[i].y;
+			//vector.z = mesh->mTangents[i].z;
 			//vertex.Tangent = vector;
 			// Bitangent
-			vector.x = mesh->mBitangents[i].x;
-			vector.y = mesh->mBitangents[i].y;
-			vector.z = mesh->mBitangents[i].z;
+			//vector.x = mesh->mBitangents[i].x;
+			//vector.y = mesh->mBitangents[i].y;
+			//vector.z = mesh->mBitangents[i].z;
 			//vertex.Bitangent = vector;
 			vertices.push_back(vertex);
 		}
