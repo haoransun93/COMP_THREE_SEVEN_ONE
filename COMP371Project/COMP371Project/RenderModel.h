@@ -1,8 +1,11 @@
 #pragma once
-#include <glut.h>
+
 // Include GLM
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+
+#include "Model.h"
+
 
 class RenderModel
 {
@@ -18,6 +21,8 @@ public:
 	GLuint color;
 	GLuint texture;
 
+	//Model model = NULL;
+ 
 	glm::mat4 return_model_matrix();
 	glm::vec3 return_model_location();
 

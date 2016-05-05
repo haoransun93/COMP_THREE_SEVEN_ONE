@@ -1,6 +1,4 @@
 #include "RenderModel.h"
-
-
 RenderModel::RenderModel()
 {
 	can_rotate = true;

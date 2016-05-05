@@ -9,11 +9,10 @@
 
 // Include GLEW
 #define GLEW_STATIC
-#include <glew.h>
+#include <GL\glew.h>
 
 // Include GLFW
-#include <glfw3.h>
-#include <glut.h>
+#include <GLFW\glfw3.h>
 
 // Include GLM
 #include <glm/glm.hpp>
@@ -26,7 +25,7 @@ const float DEGREE_TO_RAD = 0.0174;
 const int GLOBAL_WIDTH = 900;
 const int GLOBAL_HEIGHT = 900;
 
-const float SPEED_UP = 5.0f;
+
 const float LOOK_AT_MOVE = 0.01f;
 
 const glm::vec3 ROTATE_AXIS_X = glm::vec3(1.0f, 0.0f, 0.0f);

@@ -11,11 +11,11 @@
 
 // Include GLEW
 #define GLEW_STATIC
-#include <glew.h>
+#include <GL\glew.h>
 
 // Include GLFW
-#include <glfw3.h>
-#include <glut.h>
+#include <GLFW\glfw3.h>
+
 // Include GLM
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -38,6 +38,7 @@ glm::mat4 View;
 
 float rotate_amount = 0.0f;
 float rotate_speed = 0.003f;
+float SPEED_UP = 1.0f;
 
 std::vector<RenderModel> models;
 std::map<std::string, GLuint> buffers;
@@ -61,14 +62,13 @@ float check_collision_between_camera_sight_and_model(RenderModel model)
 	{
 		return -1.0f;
 	}
-
 	else 
 	{
 		float root = sqrt(under_root);
 		float first = abs(ioc - root);
 		float second = abs(ioc + root);
 
-		return max(first, second);
+		return std::max(first, second);
 	}
 	//get the smallest in absolute value;
 }
@@ -124,6 +124,12 @@ int handleinput_change_state()
 	}
 	if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS){
 		rotate_speed -= SPEED_UP * 0.00001f;
+	}
+	if (glfwGetKey(window, GLFW_KEY_PAGE_UP) == GLFW_PRESS){
+		// += 0.1f;
+	}
+	if (glfwGetKey(window, GLFW_KEY_PAGE_DOWN) == GLFW_PRESS){
+		//SPEED_UP -= -0.1f;
 	}
 	return 0;
 }
